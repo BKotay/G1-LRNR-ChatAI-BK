@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import Home from "../pages/Home"; // Adjust this import based on your file structure
+import Home from "../pages/Home"; 
 
 describe("Home Component", () => {
   it('redirects to /quiz when "BEGIN JOURNEY" button is clicked', () => {

@@ -1,9 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
-import Quiz from "../pages/Quiz.jsx"; // Adjust the import path as needed
+import Quiz from "../pages/Quiz.jsx"; 
 
 describe("Quiz Component", () => {
-  it("1. Renders the Quiz Form with Default Values", () => {
+  it("Renders the Quiz Form with Default Values", () => {
     render(<Quiz />);
 
     // Check if the form title is rendered
@@ -16,7 +16,7 @@ describe("Quiz Component", () => {
     expect(screen.getByDisplayValue("Master Oogway")).toBeInTheDocument(); // Style
   });
 
-  it("2. Updates State When User Changes Form Inputs", () => {
+  it("Updates State When User Changes Form Inputs", () => {
     render(<Quiz />);
 
     // Change the topic
@@ -24,7 +24,7 @@ describe("Quiz Component", () => {
     fireEvent.change(topicSelect, { target: { value: "aws" } });
     expect(topicSelect.value).toBe("aws");
 
-    // Change the expertise
+    // Change the difficulty level 
     const expertiseSelect = screen.getByLabelText("Expertise"); 
     fireEvent.change(expertiseSelect, { target: { value: "Intermediate" } });
     expect(expertiseSelect.value).toBe("Intermediate");
@@ -34,7 +34,7 @@ describe("Quiz Component", () => {
     fireEvent.change(numQuestionsSelect, { target: { value: "10" } });
     expect(numQuestionsSelect.value).toBe("10");
 
-    // Change the style
+    // Change the style of questions
     const styleSelect = screen.getByLabelText("Style of Questions"); 
     fireEvent.change(styleSelect, { target: { value: "Jedi" } });
     expect(styleSelect.value).toBe("Jedi");

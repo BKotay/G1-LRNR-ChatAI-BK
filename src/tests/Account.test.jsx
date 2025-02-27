@@ -1,15 +1,15 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import Account from "../pages/Account.jsx"; // Adjust the import path as needed
+import Account from "../pages/Account.jsx"; 
 
 describe("Account Component", () => {
-  it("1. Renders the Account Page Correctly", () => {
+  it("Renders the Account Page Correctly", () => {
     render(<Account />);
 
     // Check if the account title is rendered
     const accountTitle = screen.getByText("Account");
     expect(accountTitle).toBeInTheDocument();
-    expect(accountTitle).toHaveClass("text-7xl"); // Check for the correct class
+    expect(accountTitle).toHaveClass("text-7xl"); // Check for the correct class for the account title
 
     // Check if the Streak section is rendered
     const streakIcon = screen.getByText("🔥");
