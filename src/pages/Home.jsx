@@ -39,7 +39,9 @@ export default function Home() {
           {/* Personalized Quizzes */}
           <div className="text-center">
             <div className="flex justify-center mb-4">
-              <Zap className="w-12 h-12 text-emerald-400" />
+              <Zap 
+              data-testid="zap-icon"
+              className="w-12 h-12 text-emerald-400 zap-icon" />
             </div>
             <h3 className="text-xl font-semibold mb-4">Personalized Quizzes</h3>
             <p className="text-gray-600">
@@ -50,7 +52,9 @@ export default function Home() {
           {/* Rewarding */}
           <div className="text-center">
             <div className="flex justify-center mb-4">
-              <CreditCard className="w-12 h-12 text-emerald-400" />
+              <CreditCard 
+              data-testid="credit-card-icon"
+              className="w-12 h-12 text-emerald-400 credit-card" />
             </div>
             <h3 className="text-xl font-semibold mb-4">Rewarding</h3>
             <p className="text-gray-600">
@@ -61,7 +65,10 @@ export default function Home() {
           {/* Personal SME */}
           <div className="text-center">
             <div className="flex justify-center mb-4">
-              <User className="w-12 h-12 text-emerald-400" />
+              <User 
+              className="w-12 h-12 text-emerald-400 user-icon"
+              data-test="user-icon"
+               />
             </div>
             <h3 className="text-xl font-semibold mb-4">Personal SME</h3>
             <p className="text-gray-600">
